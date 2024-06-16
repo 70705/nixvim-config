@@ -11,8 +11,9 @@
     ignorecase = true;
     smartcase = true;
 
+  
     # Tab defaults (might get overwritten by an LSP server)
-    tabstop = 4;
+    tabstop = 2;
     shiftwidth = 4;
     softtabstop = 0;
     expandtab = true;

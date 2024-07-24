@@ -32,8 +32,10 @@
 
     none-ls = {
       enable = true;
-      cmd = ["bash -c nvim"];
-      debug = true;
+      settings = {
+        debug = true;
+        cmd = ["bash -c nvim"];
+      };
       sources = {
         code_actions = {
           statix.enable = true;
@@ -57,7 +59,7 @@
           };
           black = {
             enable = true;
-            withArgs = ''
+            settings = ''
               {
                 extra_args = { "--fast" },
               }
@@ -354,41 +356,9 @@
   #   # accelerated-jk
   # ];
 
-      colorschemes.tokyonight = {
+      colorschemes.base16 = {
         enable = true;
-        settings = {
-          no_bold = false;
-          no_italic = false;
-          no_underline = false;
-          transparent_background = true;
-          integrations = {
-            cmp = true;
-            noice = true;
-            notify = true;
-            neotree = true;
-            harpoon = true;
-            gitsigns = true;
-            which_key = true;
-            illuminate.enabled = true;
-            treesitter = true;
-            treesitter_context = true;
-            telescope.enabled = true;
-            indent_blankline.enabled = true;
-            mini.enabled = true;
-            native_lsp = {
-              enabled = true;
-              inlay_hints = {
-                background = true;
-              };
-              underlines = {
-                errors = ["underline"];
-                hints = ["underline"];
-                information = ["underline"];
-                warnings = ["underline"];
-              };
-            };
-          };
-        };
+        colorscheme = "black-metal-mayhem";
       };
 
 
@@ -399,6 +369,7 @@
       nvim-web-devicons # Should load this in at Telescope/Neotree actions.
       friendly-snippets # Should load this in at LuaSnip's initialisation, no clue how tho yet...
       glow-nvim # Glow inside of Neovim
+      ultisnips
       clipboard-image-nvim
     ]
     ++ [

@@ -2,6 +2,21 @@
 
   keymaps = [
 
+    # Paste without yanking previous text
+    {
+      action = "\"_dP";
+      key = "p";
+      mode = "x";
+    }
+
+    # Delete without yanking
+    {
+      action = "\"_d";
+      key = "d";
+      mode = "v";
+    }
+
+    # Toggle Terminal bind
     {
       action = "<cmd>ToggleTerm<CR>";
       key = "<C-t>";
@@ -19,14 +34,17 @@
     {
       action = "<cmd>Telescope live_grep<CR>";
       key = "<leader>fw";
+      options.desc = "Find text with telescope";
     }
     {
       action = "<cmd>Telescope find_files<CR>";
       key = "<leader>ff";
+      options.desc = "Find files with telescope";
     }
     {
       action = "<cmd>Telescope git_commits<CR>";
       key = "<leader>fg";
+      options.desc = "Find Git files with telescope";
     }
     {
       action = "<cmd>Telescope oldfiles<CR>";

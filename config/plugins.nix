@@ -184,11 +184,6 @@
 
     which-key = {
       enable = true;
-      registrations = {
-        "<leader>fg" = "Find Git files with telescope";
-        "<leader>fw" = "Find text with telescope";
-        "<leader>ff" = "Find files with telescope";
-      };
     };
 
     # Markdown preview server
@@ -215,7 +210,7 @@
     # Todo comments
     todo-comments = {
       enable = true;
-      colors = {
+      settings.colors = {
         error = ["DiagnosticError" "ErrorMsg" "#DC2626"];
         warning = ["DiagnosticWarn" "WarningMsg" "#FBBF24"];
         info = ["DiagnosticInfo" "#2563EB"];
@@ -309,7 +304,6 @@
     alpha = {
       enable = true;
       theme = "dashboard";
-      iconsEnabled = true;
     };
 
     cmp-nvim-lsp = {

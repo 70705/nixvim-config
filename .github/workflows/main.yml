@@ -44,11 +44,11 @@ jobs:
           title: "Update flake.lock"
           labels: dependencies, automated
           assignees: github-actions[bot]
-          reviewers: [ ]
 
       - name: Merge Pull Request
         if: success()
         uses: ahmadnassri/action-auto-merge@v1
         with:
           github-token: ${{ secrets.GH_TOKEN }}
-          merge-method: squashdate_flake_lock_action:refs/heads/update_flake_lock_action
+          merge-method: squash
+

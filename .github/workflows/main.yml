@@ -45,10 +45,3 @@ jobs:
           labels: dependencies, automated
           assignees: github-actions[bot]
 
-      - name: Merge Pull Request
-        if: success()
-        uses: ahmadnassri/action-auto-merge@v1
-        with:
-          github-token: ${{ secrets.GH_TOKEN }}
-          merge-method: squash
-
